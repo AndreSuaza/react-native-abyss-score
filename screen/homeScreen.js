@@ -75,17 +75,13 @@ function HomeScreen({ navigation }) {
 
 
     return (
-        <ImageBackground 
-          source={require('../assets/images/background.jpg')} 
-          resizeMode='cover'
-          style={styles.rootScreen}
-        >
+        
           <KeyboardAvoidingView style={styles.rootScreen} >
               <ScrollView style={[styles.rootScreen, {marginTop: marginTopDistance}]}>
                 {content}
               </ScrollView>
           </KeyboardAvoidingView>
-        </ImageBackground>
+        
 
         );
 }
