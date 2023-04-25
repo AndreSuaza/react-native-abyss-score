@@ -22,55 +22,48 @@ function ScoreScreen({ route, navigation }) {
     const viewHorizontal = height < 380 ? false : true;
 
     return <KeyboardAvoidingView style={styles.rootScreen}>
-            
-                <ImageBackground 
-                    source={require('../assets/images/background.jpg')} 
-                    resizeMode='cover'
-                    style={styles.rootScreen}
-                >
-                    {viewHorizontal && <Title>Score</Title> }
-                    <ScrollView 
-                        style={styles.screen} 
-                        horizontal={viewHorizontal} 
-                        pagingEnabled 
-                        showsHorizontalScrollIndicator={false}
-                        alwaysBounceHorizontal={false}
-                    >
-                    <View style={styles.center}>
-                        <View style={styles.container}>
-                            <View>
-                                <Image
-                                    source={require('../assets/images/lords.png')}
-                                    style={styles.image}
-                                    resizeMode='cover'
-                                />
-                                <Image
-                                    source={require('../assets/images/keys.png')}
-                                    style={styles.image}
-                                    resizeMode='cover'
-                                />
-                                <Image
-                                    source={require('../assets/images/try.png')}
-                                    style={styles.image}
-                                    resizeMode='cover'
-                                />
-                                <Image
-                                    source={require('../assets/images/star.png')}
-                                    style={styles.image}
-                                    resizeMode='cover'
-                                />
-                                <Image
-                                    source={require('../assets/images/monster.png')}
-                                    style={styles.image}
-                                    resizeMode='cover'
-                                />
-                            </View>
-                            { scores }
+            {viewHorizontal && <Title>Score</Title> }
+            <ScrollView 
+                style={styles.screen} 
+                horizontal={viewHorizontal} 
+                pagingEnabled 
+                showsHorizontalScrollIndicator={false}
+                alwaysBounceHorizontal={false}
+            >
+                <View style={styles.center}>
+                    <View style={styles.container}>
+                        <View>
+                            <Image
+                                source={require('../assets/images/lords.png')}
+                                style={styles.image}
+                                resizeMode='cover'
+                            />
+                            <Image
+                                source={require('../assets/images/keys.png')}
+                                style={styles.image}
+                                resizeMode='cover'
+                            />
+                            <Image
+                                source={require('../assets/images/try.png')}
+                                style={styles.image}
+                                resizeMode='cover'
+                            />
+                            <Image
+                                source={require('../assets/images/star.png')}
+                                style={styles.image}
+                                resizeMode='cover'
+                            />
+                            <Image
+                                source={require('../assets/images/monster.png')}
+                                style={styles.image}
+                                resizeMode='cover'
+                            />
                         </View>
-                        <PrimaryButton onPress={onPressHomeHandler} marginTop={20}>Nuevo</PrimaryButton>
+                        { scores }
                     </View>
-                    </ScrollView>
-                </ImageBackground>
+                    <PrimaryButton onPress={onPressHomeHandler} marginTop={20}>Nuevo</PrimaryButton>
+                </View>
+            </ScrollView>
         </KeyboardAvoidingView>
 }
 
@@ -80,7 +73,6 @@ export default ScoreScreen;
 const styles = StyleSheet.create({
     rootScreen: {
         flex: 1,
-        backgroundColor: 'black',
     },
     screen: {
         flex: 1,
